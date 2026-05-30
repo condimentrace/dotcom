@@ -457,6 +457,29 @@
         font-size: 0.9rem;
       }
 
+      .report-wrap {
+        margin-top: 14px;
+      }
+
+      .report-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(223, 70, 1, 0.45);
+        background: linear-gradient(90deg, rgba(17, 17, 17, 0.96) 0%, rgba(58, 31, 14, 0.96) 70%, rgba(223, 70, 1, 0.96) 100%);
+        color: #fff3e6;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        text-decoration: none;
+      }
+
+      .report-link:hover {
+        filter: brightness(1.04);
+      }
+
       @media (max-width: 760px) {
         .hero,
         .topbar {
@@ -918,6 +941,12 @@
 
                   <div className="chart-meta">
                     <span>* indicates an unverified win, turns out it is hard to find this data</span>
+                  </div>
+
+                  <div className="report-wrap">
+                    <a className="report-link" href="https://github.com/condimentrace/dotcom/issues" target="_blank" rel="noreferrer">
+                      Catch a bad stat? Submit a correction!
+                    </a>
                   </div>
 
                   {chartError && <p className="chart-alert">{chartError}</p>}
